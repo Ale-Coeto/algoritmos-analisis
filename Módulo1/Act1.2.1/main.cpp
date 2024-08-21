@@ -2,6 +2,8 @@
 // Última modificación: Martes 20 de Agosto
 // Programa para calcular la cantidad de monedas que se deben dar como cambio
 
+#include "libs.h"
+
 #include <iostream>
 #include <vector>
 #include <map>

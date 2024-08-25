@@ -10,34 +10,43 @@
  
 using namespace std;
 
+// Complejidad temporal: O(A * C * C), donde A es el cambio a dar y C la cantidad de monedas.
+// Complejidad espacial: O(A * C), donde A es el cambio a dar, y C es la cantidad de monedas.
 // Función para obtener la cantidad mínima de monedas que se necesitan dar de cambio
 // Recibe las monedas, el precio y la cantidad pagada
 // Imprime la cantidad de cada moneda
 void coinChange(vector<int>& coins, int amount) {
     vector<map<int,int> > used(amount+1, map<int,int>());
     vector<int> dp(amount+1, INT_MAX);
+
+    // O(NlogN) -> complejidad usando algoritmo de ordenamiento estándar
     sort(coins.rbegin(), coins.rend());
 
+    // O(A), donde A es el dinero por regresar como cambio
     for (int i = 1; i <= amount; i++) {
+
+        // O(C), donde C es la cantidad de monedas disponibles
         for (auto coin : coins) {
             int check = i - coin;
             if (check == 0) {
                 dp[i] = 1;
-                used[i].clear();
-                used[i][coin]++;
+                used[i].clear(); // O(C)
+                used[i][coin]++; // O(log(C))
                 break;
             }
             else if (check >= 1 && dp[check] != INT_MAX) {
                 if (dp[check] + 1 < dp[i]) {
                     dp[i] = dp[check] + 1;
-                    used[i] = used[check];
-                    used[i][coin]++;
+                    used[i] = used[check]; // O(C)
+                    used[i][coin]++; // O(log(C))
                 }
             }
         }
     }
 
     cout << endl;
+
+    // O(C), donde C es la cantidad de monedas disponibles
     if (dp[amount] != INT_MAX) {
         for (int coin : coins) {
             cout << used[amount][coin] << " moneda(s) de " << coin << ".\n";
@@ -55,7 +64,8 @@ int main() {
     cout << "Ingrese el número de denominaciones de monedas: ";
     cin >> n;
     cout << "Ingrese las denominaciones de las monedas, una por línea: " << endl;
-    
+
+    // Complejidad -> O(N) 
     while (n--) {
         cin >> a;
         coins.push_back(a);

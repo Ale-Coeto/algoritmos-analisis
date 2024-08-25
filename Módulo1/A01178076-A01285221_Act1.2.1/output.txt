@@ -1,0 +1,7 @@
+Ingrese el número de denominaciones de monedas: Ingrese las denominaciones de las monedas, una por línea: 
+Ingrese el precio del producto: Ingrese la cantidad pagada: 
+9 moneda(s) de 20.
+0 moneda(s) de 10.
+0 moneda(s) de 5.
+1 moneda(s) de 2.
+1 moneda(s) de 1.

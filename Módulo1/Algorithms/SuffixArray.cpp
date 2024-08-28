@@ -1,10 +1,8 @@
 // Oscar Arreola (A01178076) y Alejandra Coeto (A01285221)
-// Última modificación: Jueves 15 de Agosto
-// Programa para probar la implementación del algoritmo MergeSort
+// Última modificación: Martes 27 de Agosto
+// Programa para probar la implementación del algoritmo Suffix Array
 
-#include <iostream>
-#include <vector>
-#include <stdio.h>
+#include "libs.h"
  
 using namespace std;
 typedef vector<int> vi;

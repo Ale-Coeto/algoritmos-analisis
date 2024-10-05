@@ -1,6 +1,13 @@
-aza
-zaaa
+5
+poca
+loco
+loca
+lapiz
+pozo
 
-1 2 3 
-1 2 4
-1 2 3
+
+3
+loco
+chale
+pozo
+

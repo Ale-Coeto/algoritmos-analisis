@@ -2,10 +2,8 @@
 // Última modificación: Miércoles 16 de Octubre
 // Programa para probar el algoritmo Welsh y Powell para colorear grafos
 
-#include <iostream>
-#include <vector>
-#include <queue>
- 
+#include "libs.h"
+
 using namespace std;
 typedef vector<int> vi;
 typedef pair<int,int> ii;
@@ -92,14 +90,7 @@ int main() {
             }
         }
     }
-
-    for (auto x : graph) {
-        for (auto i : x) {
-            cout << i << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
+    
     vi colors = welsh_powell(graph);
 
     for (int i = 0; i < colors.size(); i++) {

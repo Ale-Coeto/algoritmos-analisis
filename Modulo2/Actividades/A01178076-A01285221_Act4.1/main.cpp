@@ -30,8 +30,8 @@ int main() {
         Point points[4] = {Point(x1,y1), Point(x2,y2), Point(x3,y3), Point(x4,y4)};
         Line line1 = Line::pointsToLine(points[0], points[1]);
         Line line2 = Line::pointsToLine(points[2], points[3]);
-        cout << (Line::segmentsIntersect(line1, line2, points[0], points[1], points[2], points[3]) ? "YES" : "NO") << endl; 
+        cout << (Line::segmentsIntersect(line1, line2, points[0], points[1], points[2], points[3]) ? "True" : "False") << endl; 
     }
-    
+
     return 0;
 }

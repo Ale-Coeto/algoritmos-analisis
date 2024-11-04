@@ -66,7 +66,6 @@ class Line {
             Point* p = intersectsAt(l1, l2);
 
             if (p == NULL) {
-                std::cout << "parallel\n";
                 return false;
             }
 

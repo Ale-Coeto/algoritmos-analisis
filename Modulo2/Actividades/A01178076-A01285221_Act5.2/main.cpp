@@ -44,6 +44,10 @@ void bt(vector<vi> & hats, int & n, int curr, int & ans, int64 & mask) {
     
 }
 
+/*
+    Función main para leer el input e imprimir el numero total de 
+    arreglos en las que las personas pueden usar gorras sin repetir
+*/
 int main() {
     int n,a;
     string line;

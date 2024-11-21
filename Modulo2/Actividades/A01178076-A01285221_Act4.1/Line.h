@@ -49,7 +49,7 @@ class Line {
         }
 
         static Line pointAndSlopeToLine(const Point &p, double m) {
-            return Line(-m, 1, -(-m * p.getX()) + p.getY());
+            return Line(-m, 1, -(-m * p.getX() + p.getY()));
         }
 
         static bool areParallel(const Line &l1, const Line &l2) {
@@ -100,8 +100,8 @@ class Line {
         }
 
         static double intersectionAngle(const Line &l1, const Line &l2) {
-            return atan ( (l1.getA() * l2.getB()) - (l2.getA() * l1.getB())
-            / (l1.getA() * l2.getA()) - (l1.getB() * l2.getB()));
+            return atan((l1.getA() * l2.getB() - l2.getA() * l1.getB()) / 
+            (l1.getA() * l2.getA() + l1.getB() * l2.getB()));
         }
 
         static Point* closestPoint(const Point &p, const Line &l) {

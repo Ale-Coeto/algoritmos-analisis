@@ -23,9 +23,8 @@ class Point {
         double getY() const {
             return y;
         }
-
         
-        static double dist(const Point &p1, const Point &p2) {
+       static double dist(const Point &p1, const Point &p2) {
             double diffx = p1.getX() - p2.getX();
             double diffy = p1.getY() - p2.getY();
             return sqrt((diffx * diffx) + (diffy * diffy));
@@ -34,8 +33,8 @@ class Point {
         static Point rotate(const Point &p, double theta) {
             double rad = theta * M_PI / 180.0; // Convert degrees to radians
             return Point(p.getX() * cos(rad) - p.getY() * sin(rad),
-            p.getX() * sin(rad) + p.getY() * cos(rad));
-        }
+                         p.getX() * sin(rad) + p.getY() * cos(rad));
+        } 
 
 };
 
